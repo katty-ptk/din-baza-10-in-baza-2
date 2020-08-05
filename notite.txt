@@ -1,0 +1,5 @@
+conversia din baza 10 in baza 2: 
+
+I -- nr se imparte la 2
+II -- catul impartirii se imparte la 2 -- si tot asa -- pana cand avem: 1:2 = 0 r 1
+III -- la final, resturile se scriu in ordinea inversa rezultatelor (de la cap la coada) => resultat
