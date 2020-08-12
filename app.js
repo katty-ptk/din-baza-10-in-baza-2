@@ -16,7 +16,7 @@ calculate_b = ( number, number_copy ) => {
 
      for ( number_copy; number_copy >= 2; number_copy -- ) {
 
-        reminder = parseInt(number_copy % 2); /
+        reminder = parseInt(number_copy % 2); 
 
         number_copy /= 2; // number will be divided by 2 each time the loop is looped through
         result_arr.push(reminder); // each reminder should be added to the array
@@ -47,7 +47,7 @@ $("#submit-btn").click(function ( event ) {
     } else {
 
 
-        result = calculate_b(number);
+        result = calculate_b( number, number_copy );
         result_p.textContent = "b = " + result;
 
         // console.log(rezultat);
