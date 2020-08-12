@@ -47,7 +47,7 @@ $("#submit-btn").click(function ( event ) {
     } else {
 
 
-        result = calculate_b(number);
+        result = calculate_b( number, number_copy );
         result_p.textContent = "b = " + result;
 
         // console.log(rezultat);
