@@ -2,11 +2,10 @@ result_p = document.createElement('p');
 
 calculate_b = ( number, number_copy ) => {
 
-    for ( number; number >= 2; number -- ) { 
+    for ( number; number >= 2; number /= 2 ){ 
 
         division_arr = new Array();
 
-        number /= 2;
         div_number = number; // num after division
         division_arr.push(div_number); // div_number is pushed to the division array
 
@@ -14,14 +13,14 @@ calculate_b = ( number, number_copy ) => {
 
      result_arr = new Array(); // new array which should store the reminders
 
-     for ( number_copy; number_copy >= 2; number_copy -- ) {
+     for ( number_copy; number_copy >= 2; number_copy /= 2 ) {
+   //     console.log("nr este " + number_copy);
 
-        reminder = parseInt(number_copy % 2); 
-
-        number_copy /= 2; // number will be divided by 2 each time the loop is looped through
+        reminder = number_copy % 2; 
         result_arr.push(reminder); // each reminder should be added to the array
 
-        console.log("nr este " + number_copy);
+        // number_copy /= 2; // number will be divided by 2 each time the loop is looped through
+
 
      }
 
