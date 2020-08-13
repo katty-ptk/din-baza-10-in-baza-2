@@ -11,25 +11,32 @@ calculate_b = ( number, number_copy ) => {
 
      }
 
+
+
      result_arr = new Array(); // new array which should store the reminders
 
      for ( number_copy; number_copy >= 2; number_copy /= 2 ) {
-   //     console.log("nr este " + number_copy);
 
-        reminder = number_copy % 2; 
+        reminder = parseInt(number_copy % 2); 
         result_arr.push(reminder); // each reminder should be added to the array
-
-        // number_copy /= 2; // number will be divided by 2 each time the loop is looped through
-
 
      }
 
-     
-     console.log(result_arr);
-
      last_div_num = parseInt(division_arr.slice(-1).pop()); // getting the last element of the division array -- it'll be the first element of the result array
-    //  console.log('ultimul cat este ' + last_div_num);
+     result_arr.push(last_div_num);
 
+
+     final_result_arr = new Array();
+     final_result_arr = result_arr.reverse(); // primul cat + resturile in ordine inversa
+
+     console.log(final_result_arr.join('')); 
+
+     /* 
+        console.log(elements.join(''));
+        // expected output: "FireAirWater"
+    */
+
+     
 
 }
 
@@ -46,8 +53,8 @@ $("#submit-btn").click(function ( event ) {
     } else {
 
 
-        result = calculate_b( number, number_copy );
-        result_p.textContent = "b = " + result;
+        result = calculate_b ( number, number_copy );
+        result_p.textContent = "b = " + final_result_arr.join(''); // cifrele fara altceva intre ele
 
         // console.log(rezultat);
     }
